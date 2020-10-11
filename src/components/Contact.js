@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import '../css/contact.css';
 import Alert from './Alert';
 import firebase from './Firebase';
-import {error} from "firebase-functions/lib/logger";
 
 class Contact extends Component {
     constructor(props) {
@@ -12,8 +11,8 @@ class Contact extends Component {
             email:'',
             subject:'',
             message:'',
-            emailResult:'boru',
-            error:'soru'
+            emailResult:'',
+            error:''
         }
     }
     handleChange =(event)=> {
