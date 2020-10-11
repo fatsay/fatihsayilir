@@ -1,0 +1,53 @@
+.about-card-row {
+    text-align: center;
+}
+.about-card-column {
+    float: left;
+    width: 50%;
+    padding: 1vw;
+    margin-bottom: 20px;
+}
+.about-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    padding:10px 20px 10px 0;
+    background-color: antiquewhite;
+    min-height: 260px;
+    border-radius: 10px;
+    text-align: justify;
+}
+.about-card-icon {
+    width: 30%;
+    height: 160px;
+    float: left;
+    text-align: center;
+}
+.about-card-icon img {
+    position: relative;
+    width: 80px;
+    height: auto;
+    top: 50%;
+}
+.about-content {
+    width: 70%;
+    min-height: 160px;
+    float: left;
+    margin-top: 5%;
+}
+.about-content-header {
+    font-size: 16px;
+    color: gray;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+    text-align: center;
+}
+.about-content-text {
+    color: gray;
+    font-size: 14px;
+    padding: 10px 0;
+}
+/* Responsive columns */
+@media screen and (max-width: 1000px) {
+    .about-card-column {
+        width: 100%;
+    }
+}

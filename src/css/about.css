@@ -1,0 +1,42 @@
+.container-about {
+    color: darkslategrey;
+    width: 100%;
+    background-color: white;
+    padding: 50px 10px;
+}
+.header-about {
+    width: 100%;
+    font-size: 16px;
+    padding:10px;
+    border-bottom: 1px solid darkgray;
+}
+.header-about i {
+    padding-right: 1vw;
+}
+.text-about {
+    text-align: justify;
+    padding: 1vw;
+    font-size: 14px;
+    line-height: 20px;
+}
+/* About Card*/
+.container-about-card {
+    margin-top: 2vw;
+    min-height: 250px;
+}
+/*MySkills*/
+.container-my-skills {
+    margin-top: 50px;
+}
+/*Hide in PC voie (enabled in home.css)*/
+.about-resume {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+@media screen and (max-width: 700px) {
+    .container-about {
+        margin-top: 10vw;
+    }
+    .about-resume {display: block}
+}

@@ -1,0 +1,35 @@
+.container-home {
+    margin: 0;
+}
+.container-left {
+    position: fixed;
+    width: 35%;
+    float: left;
+    min-height: 100%;
+    background-color: lightcyan;
+    background-size: cover;
+    overflow: hidden;
+}
+.container-right {
+    position: relative;
+    width: 65%;
+    float: right;
+    color: darkslategrey;
+    overflow: scroll;
+}
+@media screen and (max-width: 700px) {
+    .container-left {
+        width: 100%;
+        float: none;
+        min-height: 0;
+        max-height: 600px;
+    }
+    .container-header {
+        margin-top: 10vw;
+        color: white;
+    }
+    .container-header p {color: white;}
+    .container-right {width: 100%;}
+    .links-left-icon {display: none}
+    .links-left-resume {display: none}
+}

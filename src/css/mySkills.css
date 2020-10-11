@@ -1,0 +1,17 @@
+.my-skills-header {
+    padding: 10px 0;
+    color: darkslategrey;
+    font-size: 14px;
+}
+.skill-bar-container {
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+.bar {
+    text-align: right;
+    padding: 10px 10px 10px 0;
+    color: white;
+    font-size: 12px;
+    border-radius: 10px;
+}
