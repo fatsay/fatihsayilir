@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import '../css/contact.css';
+import Alert from './Alert';
 import firebase from './Firebase';
+import {error} from "firebase-functions/lib/logger";
 
 class Contact extends Component {
     constructor(props) {
@@ -10,11 +12,9 @@ class Contact extends Component {
             email:'',
             subject:'',
             message:'',
-            emailResult:'',
+            emailResult:'boru',
+            error:'soru'
         }
-    }
-    validateForm =()=> {
-        //validate form inputs
     }
     handleChange =(event)=> {
         this.setState({
@@ -32,9 +32,9 @@ class Contact extends Component {
         const sendMail=firebase.functions().httpsCallable('sendMail');
         sendMail(email).then(result=>{
             this.setState({emailResult:result.data})
-        })
+        }).catch(error=>
+            this.setState({error:error.message}))
     }
-
     render() {
         return (
             <div className={'container-contact'} id={'contact'}>
@@ -85,13 +85,14 @@ class Contact extends Component {
                                       required
                             />
                             </div>
-                            <div className={'contact-form-group'}>
+                            <div className={'contact-form-group'} style={{float:'right'}}>
                                 <button type={'submit'} className={'btn-button'}>
                                     <i className={'fas fa-paper-plane'}/>Send Message
                                 </button>
                             </div>
                         </div>
                     </form>
+                    {this.state.emailResult.length>0 &&<Alert text={this.state.emailResult}/>}
                 </div>
             </div>
         );
