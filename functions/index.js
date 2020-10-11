@@ -7,7 +7,7 @@ const nodemailer = require('nodemailer');
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 //
 
-exports.sendMail= functions.https.onCall((data, context) => {
+exports.('MyFunctionName')= functions.https.onCall((data, context) => {
    return data.name+' your mail is received!!'
 });
 /* Get the data from sendMail and save it in firestore
