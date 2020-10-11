@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import '../css/contact.css';
+import firebase from './Firebase';
 
 class Contact extends Component {
     constructor(props) {
@@ -8,7 +9,8 @@ class Contact extends Component {
             name:'',
             email:'',
             subject:'',
-            message:''
+            message:'',
+            emailResult:'',
         }
     }
     validateForm =()=> {
@@ -21,14 +23,18 @@ class Contact extends Component {
     }
     handleSubmit =(event)=>{
         event.preventDefault();
-        /*apicall with axios
         const email={
             name:this.state.name,
             email: this.state.email,
             subject:this.state.subject,
             message:this.state.message
-        }*/
+        }
+        const sendMail=firebase.functions().httpsCallable('sendMail');
+        sendMail(email).then(result=>{
+            this.setState({emailResult:result.data})
+        })
     }
+
     render() {
         return (
             <div className={'container-contact'} id={'contact'}>
