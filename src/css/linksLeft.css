@@ -1,0 +1,35 @@
+.links-left-link {
+    position: relative;
+}
+.img-profile {
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+}
+.links-left-icon {
+    text-align: left;
+    color: darkslategrey;
+}
+.links-left-icon li {
+    list-style-type: none;
+    border-bottom: 1px solid lightblue;
+    border-top: 1px solid lightblue;
+    margin-right: 40px;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+.links-left-icon i {
+    vertical-align: middle;
+    padding: 10px 10px;
+}
+.links-left-icon li:hover {
+    cursor: pointer;
+    background-color: darkorange;
+}
+
+.left-resume {
+    width: 100%;
+    text-align: center;
+}

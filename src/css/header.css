@@ -1,0 +1,11 @@
+.container-header {
+    float: none;
+    text-align: center;
+    padding: 18vw 0;
+}
+.name-header {
+    font-size: 4vw;
+}
+.title-header {
+    font-size: 1.5vw;
+}
