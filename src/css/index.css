@@ -51,4 +51,28 @@ input[type=text],[type=email],[type=password],textarea {
 .fa-instagram-square {
   color: chocolate;
 }
+.alert {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: burlywood;
+  color: white;
+  font-size: 14px;
+  border-radius: 10px;
+}
+.alert-closeBtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
+.alert-closeBtn:hover {
+  color: black;
+}
