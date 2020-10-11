@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "966c0b3be266c800ab02d4cc3ad99411",
+    "revision": "2f95e37ec5afe7bf2fcb25d8ab380f49",
     "url": "/fatihsayilir/index.html"
   },
   {
-    "revision": "6810fee7f16e895251e5",
+    "revision": "b7ba3f29d4158cf7f797",
     "url": "/fatihsayilir/static/css/main.52ec5e8d.chunk.css"
   },
   {
-    "revision": "9f73bd215723bbfa596c",
-    "url": "/fatihsayilir/static/js/2.ee495648.chunk.js"
+    "revision": "d1397f70b550154746d2",
+    "url": "/fatihsayilir/static/js/2.7341f948.chunk.js"
   },
   {
     "revision": "70d88436874ad6f0b4ff8dc0e5c19c4e",
-    "url": "/fatihsayilir/static/js/2.ee495648.chunk.js.LICENSE.txt"
+    "url": "/fatihsayilir/static/js/2.7341f948.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6810fee7f16e895251e5",
-    "url": "/fatihsayilir/static/js/main.56493814.chunk.js"
+    "revision": "b7ba3f29d4158cf7f797",
+    "url": "/fatihsayilir/static/js/main.ab7704bc.chunk.js"
   },
   {
     "revision": "1ed33e7746bc4dcc8b14",
