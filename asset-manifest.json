@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/fatihsayilir/static/css/main.fb9aaa10.chunk.css",
+    "main.js": "/fatihsayilir/static/js/main.f5d0254c.chunk.js",
+    "main.js.map": "/fatihsayilir/static/js/main.f5d0254c.chunk.js.map",
+    "runtime-main.js": "/fatihsayilir/static/js/runtime-main.e3ebf466.js",
+    "runtime-main.js.map": "/fatihsayilir/static/js/runtime-main.e3ebf466.js.map",
+    "static/js/2.ad28f8b1.chunk.js": "/fatihsayilir/static/js/2.ad28f8b1.chunk.js",
+    "static/js/2.ad28f8b1.chunk.js.map": "/fatihsayilir/static/js/2.ad28f8b1.chunk.js.map",
+    "index.html": "/fatihsayilir/index.html",
+    "precache-manifest.6a3caa381bb86f94b2d73b2cda3b5360.js": "/fatihsayilir/precache-manifest.6a3caa381bb86f94b2d73b2cda3b5360.js",
+    "service-worker.js": "/fatihsayilir/service-worker.js",
+    "static/css/main.fb9aaa10.chunk.css.map": "/fatihsayilir/static/css/main.fb9aaa10.chunk.css.map",
+    "static/js/2.ad28f8b1.chunk.js.LICENSE.txt": "/fatihsayilir/static/js/2.ad28f8b1.chunk.js.LICENSE.txt",
+    "static/media/FATIH_SAYILIR-CV.pdf": "/fatihsayilir/static/media/FATIH_SAYILIR-CV.b5a8bd41.pdf",
+    "static/media/android.png": "/fatihsayilir/static/media/android.d45a2e4f.png",
+    "static/media/profile.png": "/fatihsayilir/static/media/profile.0995e47f.png",
+    "static/media/web-design.png": "/fatihsayilir/static/media/web-design.6571d152.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e3ebf466.js",
+    "static/js/2.ad28f8b1.chunk.js",
+    "static/css/main.fb9aaa10.chunk.css",
+    "static/js/main.f5d0254c.chunk.js"
+  ]
+}
