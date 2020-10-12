@@ -1,38 +1,57 @@
 const functions = require('firebase-functions');
-const cors = require('cors')({origin: true});
+const admin = require('firebase-admin');
 const nodemailer = require('nodemailer');
+admin.initializeApp();
 
-
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-
-exports.sendMail= functions.https.onCall((data, context) => {
-   return data.name+' your mail is received!!'
+//get mail object from client and set in to firestore
+exports.getMail = functions.https.onCall((data, context) => {
+   //firestore
+   //creates documents in mails collection
+   //document id = client's email address
+   //fields = name,email,subject,message (field type=String for each)
+   return admin.firestore().collection('/mails').doc(data.email).set({
+      name:data.name,
+      email:data.email,
+      subject:data.subject,
+      message:data.message,
+   }).then(()=>{
+      console.log('New mail written');
+      //returns a text to frontend web with client's name
+      return 'Thanks! '+data.name +', your mail is received!!';
+   })
 });
-/* Get the data from sendMail and save it in firestore
-    so firestore can trigger the redirectMail to me!!
-//function write firestore
-
-//transporter
- let transporter = nodemailer.createTransport({
-   service:'gmail',
-   port: '2525',
+//google account credentials to send email using nodemailer
+const transporter = nodemailer.createTransport({
+   host: 'smtp.gmail.com',
+   port: 465,
+   secure: true,
    auth: {
-     //Mail address and paa
+      user: 'user-mail-address',
+      pass: 'user-mail-password'
    }
-})
-export.redirectMail=functions.https.onRequest((req,res)=>{
-//mail options
- const mailOptions={
- from:senders mail
- to: fatih_sayilir@hotmail.com
- subject:data.subject
- html: '<b>Text</b>'
- }
- return transporter.sendMail(mailOptions, (error, info)=>{
-    if(error){return res.send(error.toString());}
-    return res.send('Email sent successfully!!')
- })
-})
-*/
+});
+//send confirmation mail to client
+//firestore triggers the mail transporter
+exports.sendMail = functions.firestore
+    .document('mails/{mailsId}')
+    .onCreate(((snapshot, context) => {
+       const mailOptions = {
+          from: 'user-mail-address',
+          to: snapshot.data().email,   //get client's mail address
+          subject: 'response message',
+          html: `<h1>Fatih Sayilir</h1>
+                    <p>
+                       <b>Name: </b>${snapshot.data().name}<br>
+                        <br>your email is received!<br>
+                        <br>Best regards!
+                    </p>`
+            };
+       //send mail here
+       return transporter.sendMail(mailOptions, (error, data) => {
+          if (error) {
+             console.log(error)
+             return
+          }
+          console.log("Sent!")
+       });
+    }));
