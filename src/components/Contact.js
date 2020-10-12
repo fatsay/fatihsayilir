@@ -28,8 +28,8 @@ class Contact extends Component {
             subject:this.state.subject,
             message:this.state.message
         }
-        const ('MyFunctionName')=firebase.functions().httpsCallable('MyFunction');
-        ('MyFunctionName')(email).then(result=>{
+        const getMail=firebase.functions().httpsCallable('getMail');
+        getMail(email).then(result=>{
             this.setState({emailResult:result.data})
         }).catch(error=>
             this.setState({error:error.message}))
